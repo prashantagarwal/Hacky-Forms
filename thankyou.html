@@ -29,45 +29,9 @@
 		<div class="body">
 			<form action="#" method="post" id="sky-form" class="sky-form" />
 				<header>Contacts form</header>
+
 				
-				<fieldset>					
-					<div class="row">
-						<section class="col col-6">
-							<label class="label">Name</label>
-							<label class="input">
-								<i class="icon-append icon-user"></i>
-								<input type="text" name="name" id="name" />
-							</label>
-						</section>
-						<section class="col col-6">
-							<label class="label">E-mail</label>
-							<label class="input">
-								<i class="icon-append icon-envelope-alt"></i>
-								<input type="email" name="email" id="email" />
-							</label>
-						</section>
-					</div>
-					
-					<section>
-						<label class="label">Subject</label>
-						<label class="input">
-							<i class="icon-append icon-tag"></i>
-							<input type="text" name="subject" id="subject" />
-						</label>
-					</section>
-					
-					<section>
-						<label class="label">Message</label>
-						<label class="textarea">
-							<i class="icon-append icon-comment"></i>
-							<textarea rows="4" name="message" id="message"></textarea>
-						</label>
-					</section>
-				</fieldset>
-				
-				<footer>
-					<button type="submit" class="button" onClick="postContactToGoogle()">Send message</button>
-				</footer>
+	
 				
 				<div class="message">
 					<i class="icon-ok"></i>
@@ -95,14 +59,14 @@ data: { "entry_855893392": name,
 	   },
 type: "POST",
 dataType: "xml",
-                        statusCode: {
-                            0: function () {
-                                window.location.replace("thankyou.html");
-                            },
-                            200: function () {
-                                window.location.replace("thankyou.html");
-                            }
-                        }
+statusCode: {
+     0: function () {
+            window.location.replace("thankyou.html");
+        },
+      200: function () {
+ 		    window.location.replace("thankyou.html");
+           }
+    }
 });
 }
 			$(function()
