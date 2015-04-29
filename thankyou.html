@@ -27,48 +27,22 @@
 	
 	<body class="bg-pink">
 		<div class="body">
-			<form action="#" method="post" id="sky-form" class="sky-form" />
-				<header>Contacts form</header>
+			<form action="#" method="post" id="sky-form" class="sky-form submited" />
+				<header>Hacky-Form</header>
 
 				
 	
 				
-				<div class="message">
+				<fieldset class="message">
 					<i class="icon-ok"></i>
 					<p>Your message was successfully sent!<br>
 					Check your output in <a href="https://docs.google.com/spreadsheets/d/1lXVY33-dEI0v4Y-FsBP52RCZ9ZJa62ciOEH70hjej1U/edit?usp=sharing" target="_blank">Google Spreadsheet</a>.
 					</p>
-				</div>
+				</fieldset>
 			</form>			
 		</div>
 		
 		<script type="text/javascript">
-		
-			function postContactToGoogle() {
-var name = $('#name').val();
-var email = $('#email').val();
-var subject = $('#subject').val();
-var message = $('#message').val();
- 
-$.ajax({
-url: "https://docs.google.com/forms/d/1aea_f4FPEfzmIUUyQHexcw6dMo69PgBtnqrzWk2mOOw/formResponse" ,
-data: { "entry_855893392": name,
-		"entry_1783695003": email,
-		"entry_368029890": subject,
-		"entry_848447579": message			
-	   },
-type: "POST",
-dataType: "xml",
-statusCode: {
-     0: function () {
-            window.location.replace("thankyou.html");
-        },
-      200: function () {
- 		    window.location.replace("thankyou.html");
-           }
-    }
-});
-}
 			$(function()
 			{
 				// Validation
